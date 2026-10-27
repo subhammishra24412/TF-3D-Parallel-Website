@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#02030b">
+  <meta
+    name="description"
+    content="CHRONOSCAPE — An immersive multi-layer parallax journey through impossible worlds."
+  >
+  <title>CHRONOSCAPE — The Infinite Parallax Journey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-orbit">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>INITIALIZING CHRONOSCAPE</p>
+  </div>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <div class="progress-track" aria-hidden="true">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <aside class="journey-nav" aria-label="Journey progress">
+    <div class="nav-line">
+      <span id="navLineFill"></span>
+    </div>
+
+    <button class="journey-dot active" data-target="edge" aria-label="The Edge of Reality">
+      <span>00</span>
+    </button>
+    <button class="journey-dot" data-target="atmosphere" aria-label="Atmospheric Descent">
+      <span>01</span>
+    </button>
+    <button class="journey-dot" data-target="city" aria-label="Neon Horizon">
+      <span>02</span>
+    </button>
+    <button class="journey-dot" data-target="fall" aria-label="The Great Fall">
+      <span>03</span>
+    </button>
+    <button class="journey-dot" data-target="abyss" aria-label="The Abyss">
+      <span>04</span>
+    </button>
+    <button class="journey-dot" data-target="crystal" aria-label="Crystal Depths">
+      <span>05</span>
+    </button>
+    <button class="journey-dot" data-target="fracture" aria-label="Gravity Fracture">
+      <span>06</span>
+    </button>
+    <button class="journey-dot" data-target="portal" aria-label="The Event Horizon">
+      <span>07</span>
+    </button>
+    <button class="journey-dot" data-target="beyond" aria-label="Beyond">
+      <span>08</span>
+    </button>
+  </aside>
+
+  <div class="scene-status" aria-hidden="true">
+    <span class="status-index" id="statusIndex">00</span>
+    <span class="status-divider"></span>
+    <span class="status-name" id="statusName">THE EDGE OF REALITY</span>
+  </div>
+
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <main id="chronoscape">
+
+    <!-- =========================================================
+         01 — THE EDGE OF REALITY
+    ========================================================== -->
+    <section class="scene scene-space active-scene" id="edge" data-scene="THE EDGE OF REALITY">
+
+      <div class="scene-sticky">
+
+        <div
+          class="layer space-gradient"
+          data-speed="0.03"
+          data-pointer="0.08"
+        ></div>
+
+        <div
+          class="layer star-layer stars-far"
+          data-speed="0.07"
+          data-pointer="0.12"
+        ></div>
+
+        <div
+          class="layer star-layer stars-mid"
+          data-speed="0.16"
+          data-pointer="0.22"
+        ></div>
+
+        <div
+          class="layer star-layer stars-near"
+          data-speed="0.31"
+          data-pointer="0.45"
+        ></div>
+
+        <div
+          class="layer nebula nebula-one"
+          data-speed="-0.08"
+          data-x-speed="0.04"
+          data-pointer="0.3"
+        ></div>
+
+        <div
+          class="layer nebula nebula-two"
+          data-speed="0.12"
+          data-x-speed="-0.05"
+          data-pointer="0.25"
+        ></div>
+
+        <div
+          class="layer cosmic-dust"
+          data-speed="0.42"
+          data-pointer="0.65"
+        ></div>
+
+        <div
+          class="planet-wrap"
+          data-speed="0.16"
+          data-scale="0.34"
+          data-pointer="0.5"
+        >
+          <div class="planet-glow"></div>
+          <div class="planet">
+            <div class="planet-surface"></div>
+            <div class="planet-shadow"></div>
+            <div class="planet-rim"></div>
+          </div>
+        </div>
+
+        <div
+          class="asteroid asteroid-a"
+          data-speed="0.9"
+          data-x-speed="-0.25"
+          data-rotate="20"
+          data-pointer="1.1"
+        ></div>
+
+        <div
+          class="asteroid asteroid-b"
+          data-speed="1.15"
+          data-x-speed="0.18"
+          data-rotate="-35"
+          data-pointer="1.4"
+        ></div>
+
+        <div
+          class="asteroid asteroid-c"
+          data-speed="0.7"
+          data-x-speed="0.12"
+          data-rotate="28"
+          data-pointer="0.9"
+        ></div>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow">AN INTERACTIVE JOURNEY</p>
+
+          <h1 class="hero-title" aria-label="Chronoscape">
+            <span>CHRONO</span>
+            <span class="outline-word">SCAPE</span>
+          </h1>
+
+          <div class="hero-meta">
+            <p class="hero-tagline">SCROLL BEYOND REALITY</p>
+            <span class="meta-line"></span>
+            <p>ONE SCROLL. INFINITE WORLDS.</p>
+          </div>
+
+          <button class="magnetic-btn begin-btn" data-scroll-target="atmosphere">
+            <span>BEGIN THE DESCENT</span>
+            <i>↓</i>
+          </button>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span>SCROLL TO DESCEND</span>
+          <div class="scroll-mouse">
+            <i></i>
+          </div>
+        </div>
+
+        <div class="scene-fade-bottom"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         02 — ATMOSPHERIC DESCENT
+    ========================================================== -->
+    <section class="scene scene-atmosphere" id="atmosphere" data-scene="ATMOSPHERIC DESCENT">
+
+      <div class="scene-sticky">
+
+        <div
+          class="layer atmosphere-sky"
+          data-speed="0.02"
+        ></div>
+
+        <div
+          class="layer atmosphere-stars"
+          data-speed="-0.12"
+          data-opacity="0.9"
+        ></div>
+
+        <div
+          class="layer atmosphere-glow"
+          data-speed="0.08"
+          data-scale="0.08"
+        ></div>
+
+        <div
+          class="layer light-rays rays-atmosphere"
+          data-speed="0.12"
+          data-x-speed="0.03"
+        ></div>
+
+        <div
+          class="cloud cloud-far cloud-far-a"
+          data-speed="0.13"
+          data-x-speed="-0.08"
+          data-pointer="0.12"
+        ></div>
+
+        <div
+          class="cloud cloud-far cloud-far-b"
+          data-speed="0.2"
+          data-x-speed="0.07"
+          data-pointer="0.18"
+        ></div>
+
+        <div
+          class="cloud cloud-mid cloud-mid-a"
+          data-speed="0.38"
+          data-x-speed="-0.12"
+          data-pointer="0.35"
+        ></div>
+
+        <div
+          class="cloud cloud-mid cloud-mid-b"
+          data-speed="0.5"
+          data-x-speed="0.13"
+          data-pointer="0.4"
+        ></div>
+
+        <div
+          class="floating-structure structure-a"
+          data-speed="0.35"
+          data-x-speed="-0.06"
+          data-pointer="0.7"
+        >
+          <span></span>
+        </div>
+
+        <div
+          class="floating-structure structure-b"
+          data-speed="0.48"
+          data-x-speed="0.09"
+          data-pointer="0.9"
+        >
+          <span></span>
+        </div>
+
+        <div
+          class="mountain-layer mountains-far"
+          data-speed="0.17"
+        ></div>
+
+        <div
+          class="mountain-layer mountains-near"
+          data-speed="0.42"
+        ></div>
+
+        <div
+          class="cloud cloud-near cloud-near-a"
+          data-speed="0.85"
+          data-x-speed="-0.18"
+          data-pointer="1"
+        ></div>
+
+        <div
+          class="cloud cloud-near cloud-near-b"
+          data-speed="1.05"
+          data-x-speed="0.2"
+          data-pointer="1.2"
+        ></div>
+
+        <div class="atmosphere-copy reveal">
+          <p class="micro-label">ATMOSPHERIC ENTRY // ALTITUDE FALLING</p>
+          <h2>DESCEND<br>THROUGH THE<br><em>UNKNOWN.</em></h2>
+        </div>
+
+        <div class="altitude-meter" aria-hidden="true">
+          <span>ALTITUDE</span>
+          <strong id="altitudeValue">84,000 KM</strong>
+          <div class="altitude-line"></div>
+        </div>
+
+        <div class="scene-fade-top"></div>
+        <div class="scene-fade-bottom"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         03 — NEON HORIZON
+    ========================================================== -->
+    <section class="scene scene-city" id="city" data-scene="THE NEON HORIZON">
+
+      <div class="scene-sticky">
+
+        <div
+          class="layer city-sky"
+          data-speed="0.03"
+        ></div>
+
+        <div
+          class="layer city-horizon-glow"
+          data-speed="0.08"
+          data-scale="0.08"
+        ></div>
+
+        <div
+          class="layer city-moon"
+          data-speed="-0.07"
+          data-x-speed="0.02"
+          data-pointer="0.18"
+        ></div>
+
+        <div
+          class="mountain-layer city-mountain-far"
+          data-speed="0.12"
+          data-pointer="0.08"
+        ></div>
+
+        <div
+          class="mountain-layer city-mountain-mid"
+          data-speed="0.24"
+          data-pointer="0.14"
+        ></div>
+
+        <div
+          class="city-silhouette skyline-far"
+          data-speed="0.18"
+        ></div>
+
+        <div
+          class="floating-island island-a"
+          data-speed="0.27"
+          data-x-speed="-0.06"
+          data-pointer="0.4"
+        >
+          <div class="island-top"></div>
+          <div class="island-bottom"></div>
+          <i></i>
+        </div>
+
+        <div
+          class="floating-island island-b"
+          data-speed="0.42"
+          data-x-speed="0.08"
+          data-pointer="0.65"
+        >
+          <div class="island-top"></div>
+          <div class="island-bottom"></div>
+          <i></i>
+        </div>
+
+        <div
+          class="floating-island island-c"
+          data-speed="0.58"
+          data-x-speed="-0.1"
+          data-pointer="0.8"
+        >
+          <div class="island-top"></div>
+          <div class="island-bottom"></div>
+          <i></i>
+        </div>
+
+        <div
+          class="city-silhouette skyline-mid"
+          data-speed="0.36"
+        ></div>
+
+        <div
+          class="tower tower-a"
+          data-speed="0.48"
+          data-pointer="0.4"
+        >
+          <span></span>
+        </div>
+
+        <div
+          class="tower tower-b"
+          data-speed="0.6"
+          data-pointer="0.6"
+        >
+          <span></span>
+        </div>
+
+        <div
+          class="tower tower-c"
+          data-speed="0.72"
+          data-pointer="0.7"
+        >
+          <span></span>
+        </div>
+
+        <div
+          class="vehicle vehicle-a"
+          data-speed="0.35"
+          data-x-speed="1.4"
+        >
+          <i></i>
+        </div>
+
+        <div
+          class="vehicle vehicle-b"
+          data-speed="0.25"
+          data-x-speed="-1.8"
+        >
+          <i></i>
+        </div>
+
+        <div
+          class="vehicle vehicle-c"
+          data-speed="0.55"
+          data-x-speed="2.1"
+        >
+          <i></i>
+        </div>
+
+        <div
+          class="layer city-fog fog-far"
+          data-speed="0.23"
+          data-x-speed="0.05"
+        ></div>
+
+        <div
+          class="layer city-fog fog-near"
+          data-speed="0.68"
+          data-x-speed="-0.08"
+        ></div>
+
+        <div
+          class="foreground-architecture"
+          data-speed="0.9"
+          data-pointer="0.7"
+        ></div>
+
+        <div class="story-content story-left reveal">
+          <div class="story-number">01</div>
+          <p class="eyebrow">THE FIRST WORLD</p>
+          <h2>THE NEON<br>HORIZON</h2>
+          <p class="story-text">
+            Civilization learned to build<br>
+            beyond the ground.
+          </p>
+        </div>
+
+        <div class="coordinate-display" aria-hidden="true">
+          <span>WORLD // 01</span>
+          <strong>37° 14' 08" N</strong>
+          <strong>∞ 91' 44" E</strong>
+        </div>
+
+        <div class="scene-fade-top"></div>
+        <div class="scene-fade-bottom"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         04 — THE GREAT FALL
+    ========================================================== -->
+    <section class="scene scene-fall" id="fall" data-scene="THE GREAT FALL">
+
+      <div class="scene-sticky">
+
+        <div class="layer fall-sky"></div>
+
+        <div
+          class="fall-city-remnant"
+          data-speed="1.2"
+          data-scale="-0.15"
+        ></div>
+
+        <div
+          class="fall-cloud fall-cloud-a"
+          data-speed="-1.2"
+          data-x-speed="0.18"
+        ></div>
+
+        <div
+          class="fall-cloud fall-cloud-b"
+          data-speed="-1.7"
+          data-x-speed="-0.22"
+        ></div>
+
+        <div
+          class="fall-cloud fall-cloud-c"
+          data-speed="-2.1"
+          data-x-speed="0.28"
+        ></div>
+
+        <div class="speed-lines" id="speedLines" aria-hidden="true"></div>
+
+        <div
+          class="fall-ring ring-a"
+          data-speed="0.8"
+          data-scale="0.7"
+          data-rotate="60"
+        ></div>
+
+        <div
+          class="fall-ring ring-b"
+          data-speed="1.1"
+          data-scale="1.1"
+          data-rotate="-90"
+        ></div>
+
+        <div class="fall-copy reveal">
+          <p>VELOCITY // UNSTABLE</p>
+          <h2>THE<br><span>GREAT</span><br>FALL</h2>
+        </div>
+
+        <div class="velocity-readout" aria-hidden="true">
+          <span>DESCENT VELOCITY</span>
+          <strong id="velocityValue">0000</strong>
+          <small>KM / H</small>
+        </div>
+
+        <div class="ocean-surface-transition"></div>
+
+        <div class="scene-fade-top"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         05 — THE ABYSS
+    ========================================================== -->
+    <section class="scene scene-abyss" id="abyss" data-scene="BENEATH THE SILENCE">
+
+      <div class="scene-sticky">
+
+        <div class="layer abyss-gradient"></div>
+
+        <div
+          class="water-surface"
+          data-speed="-0.22"
+          data-scale="0.12"
+        >
+          <div class="surface-shimmer"></div>
+        </div>
+
+        <div
+          class="layer underwater-rays"
+          data-speed="0.1"
+          data-x-speed="0.02"
+        ></div>
+
+        <div
+          class="creature creature-distant"
+          data-speed="0.12"
+          data-x-speed="-0.08"
+          data-pointer="0.12"
+        >
+          <div class="creature-body"></div>
+          <div class="creature-tail"></div>
+        </div>
+
+        <div
+          class="fish-school fish-school-a"
+          data-speed="0.2"
+          data-x-speed="0.8"
+        ></div>
+
+        <div
+          class="fish-school fish-school-b"
+          data-speed="0.34"
+          data-x-speed="-1.1"
+        ></div>
+
+        <div
+          class="jellyfish jelly-a"
+          data-speed="-0.16"
+          data-x-speed="0.06"
+          data-pointer="0.35"
+        >
+          <div class="jelly-head"></div>
+          <i></i><i></i><i></i><i></i>
+        </div>
+
+        <div
+          class="jellyfish jelly-b"
+          data-speed="-0.3"
+          data-x-speed="-0.04"
+          data-pointer="0.5"
+        >
+          <div class="jelly-head"></div>
+          <i></i><i></i><i></i><i></i>
+        </div>
+
+        <div
+          class="jellyfish jelly-c"
+          data-speed="-0.45"
+          data-x-speed="0.08"
+          data-pointer="0.7"
+        >
+          <div class="jelly-head"></div>
+          <i></i><i></i><i></i><i></i>
+        </div>
+
+        <div class="bubble-field" id="bubbleField" aria-hidden="true"></div>
+
+        <div
+          class="ocean-floor floor-far"
+          data-speed="0.18"
+        ></div>
+
+        <div
+          class="bio-plant plant-a"
+          data-speed="0.48"
+          data-pointer="0.35"
+        ></div>
+
+        <div
+          class="bio-plant plant-b"
+          data-speed="0.62"
+          data-pointer="0.5"
+        ></div>
+
+        <div
+          class="bio-plant plant-c"
+          data-speed="0.82"
+          data-pointer="0.7"
+        ></div>
+
+        <div
+          class="seaweed seaweed-left"
+          data-speed="1.05"
+          data-pointer="0.8"
+        ></div>
+
+        <div
+          class="seaweed seaweed-right"
+          data-speed="1.2"
+          data-pointer="1"
+        ></div>
+
+        <div class="story-content story-right reveal">
+          <div class="story-number">02</div>
+          <p class="eyebrow">THE SECOND WORLD</p>
+          <h2>BENEATH<br>THE SILENCE</h2>
+          <p class="story-text">
+            The deepest worlds are the ones<br>
+            we never see.
+          </p>
+        </div>
+
+        <div class="depth-meter" aria-hidden="true">
+          <span>DEPTH</span>
+          <strong id="depthValue">2,140 M</strong>
+          <div class="depth-scale">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+
+        <div class="scene-fade-top"></div>
+        <div class="scene-fade-bottom"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         06 — CRYSTAL DEPTHS
+    ========================================================== -->
+    <section class="scene scene-crystal" id="crystal" data-scene="THE CRYSTAL DEPTHS">
+
+      <div class="scene-sticky">
+
+        <div class="layer cavern-background"></div>
+
+        <div
+          class="layer cavern-glow cavern-glow-a"
+          data-speed="0.08"
+          data-x-speed="-0.03"
+        ></div>
+
+        <div
+          class="layer cavern-glow cavern-glow-b"
+          data-speed="0.14"
+          data-x-speed="0.04"
+        ></div>
+
+        <div
+          class="crystal-group crystal-far"
+          data-speed="0.13"
+          data-rotate="3"
+          data-pointer="0.12"
+        >
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+
+        <div
+          class="layer crystal-rays"
+          data-speed="0.18"
+          data-x-speed="0.03"
+        ></div>
+
+        <div
+          class="crystal crystal-mid crystal-m1"
+          data-speed="0.32"
+          data-rotate="8"
+          data-pointer="0.4"
+        ></div>
+
+        <div
+          class="crystal crystal-mid crystal-m2"
+          data-speed="0.45"
+          data-rotate="-12"
+          data-pointer="0.55"
+        ></div>
+
+        <div
+          class="crystal crystal-mid crystal-m3"
+          data-speed="0.5"
+          data-rotate="15"
+          data-pointer="0.6"
+        ></div>
+
+        <div
+          class="crystal-fragment fragment-a"
+          data-speed="-0.3"
+          data-x-speed="0.12"
+          data-rotate="100"
+          data-pointer="0.7"
+        ></div>
+
+        <div
+          class="crystal-fragment fragment-b"
+          data-speed="-0.5"
+          data-x-speed="-0.15"
+          data-rotate="-140"
+          data-pointer="0.9"
+        ></div>
+
+        <div
+          class="crystal-fragment fragment-c"
+          data-speed="0.4"
+          data-x-speed="0.2"
+          data-rotate="80"
+          data-pointer="1"
+        ></div>
+
+        <div
+          class="crystal crystal-front crystal-f1"
+          data-speed="0.85"
+          data-rotate="10"
+          data-pointer="1"
+        ></div>
+
+        <div
+          class="crystal crystal-front crystal-f2"
+          data-speed="1.05"
+          data-rotate="-8"
+          data-pointer="1.2"
+        ></div>
+
+        <div class="energy-particles" id="energyParticles" aria-hidden="true"></div>
+
+        <div class="story-content story-left crystal-copy reveal">
+          <div class="story-number">03</div>
+          <p class="eyebrow">THE THIRD WORLD</p>
+          <h2>THE CRYSTAL<br>DEPTHS</h2>
+          <p class="story-text">
+            Somewhere beneath everything,<br>
+            the world is still dreaming.
+          </p>
+        </div>
+
+        <div class="scene-fade-top"></div>
+        <div class="scene-fade-bottom"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         07 — GRAVITY FRACTURE
+    ========================================================== -->
+    <section class="scene scene-fracture" id="fracture" data-scene="GRAVITY FRACTURE">
+
+      <div class="scene-sticky">
+
+        <div class="layer fracture-background"></div>
+
+        <div
+          class="dimensional-crack crack-a"
+          data-speed="0.08"
+          data-rotate="15"
+        ></div>
+
+        <div
+          class="dimensional-crack crack-b"
+          data-speed="-0.12"
+          data-rotate="-20"
+        ></div>
+
+        <div
+          class="fracture-ring fracture-ring-a"
+          data-speed="0.12"
+          data-rotate="130"
+          data-scale="0.25"
+        ></div>
+
+        <div
+          class="fracture-ring fracture-ring-b"
+          data-speed="-0.16"
+          data-rotate="-180"
+          data-scale="-0.15"
+        ></div>
+
+        <div
+          class="fracture-ring fracture-ring-c"
+          data-speed="0.25"
+          data-rotate="220"
+          data-scale="0.35"
+        ></div>
+
+        <div
+          class="floating-rock rock-a"
+          data-speed="-0.6"
+          data-x-speed="0.25"
+          data-rotate="150"
+          data-pointer="0.8"
+        ></div>
+
+        <div
+          class="floating-rock rock-b"
+          data-speed="0.5"
+          data-x-speed="-0.32"
+          data-rotate="-210"
+          data-pointer="1"
+        ></div>
+
+        <div
+          class="floating-rock rock-c"
+          data-speed="-0.85"
+          data-x-speed="-0.18"
+          data-rotate="280"
+          data-pointer="1.3"
+        ></div>
+
+        <div
+          class="floating-rock rock-d"
+          data-speed="0.9"
+          data-x-speed="0.35"
+          data-rotate="-300"
+          data-pointer="1.4"
+        ></div>
+
+        <div
+          class="floating-shard shard-a"
+          data-speed="-0.7"
+          data-x-speed="0.4"
+          data-rotate="320"
+        ></div>
+
+        <div
+          class="floating-shard shard-b"
+          data-speed="0.8"
+          data-x-speed="-0.3"
+          data-rotate="-280"
+        ></div>
+
+        <div class="fracture-particles" id="fractureParticles" aria-hidden="true"></div>
+
+        <div class="fracture-copy reveal">
+          <p>PHYSICS // DISCONNECTED</p>
+          <h2>
+            GRAVITY<br>
+            <span>IS ONLY A</span><br>
+            SUGGESTION
+          </h2>
+        </div>
+
+        <div class="scene-fade-top"></div>
+        <div class="scene-fade-bottom"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         08 — THE EVENT HORIZON
+    ========================================================== -->
+    <section class="scene scene-portal" id="portal" data-scene="THE EVENT HORIZON">
+
+      <div class="scene-sticky">
+
+        <div class="layer portal-space"></div>
+
+        <div
+          class="layer portal-stars"
+          data-speed="0.08"
+          data-pointer="0.15"
+        ></div>
+
+        <div
+          class="layer portal-nebula"
+          data-speed="0.15"
+          data-x-speed="-0.04"
+          data-pointer="0.3"
+        ></div>
+
+        <div
+          class="portal-system"
+          id="portalSystem"
+          data-speed="0.12"
+          data-scale="0.95"
+          data-pointer="0.35"
+        >
+          <div class="portal-aura"></div>
+
+          <div class="portal-ring portal-ring-outer">
+            <i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="portal-ring portal-ring-middle">
+            <i></i><i></i><i></i>
+          </div>
+
+          <div class="portal-ring portal-ring-inner"></div>
+
+          <div class="portal-core">
+            <div class="portal-core-light"></div>
+          </div>
+        </div>
+
+        <div
+          class="portal-debris debris-a"
+          data-speed="-0.4"
+          data-x-speed="0.2"
+          data-rotate="220"
+          data-pointer="0.8"
+        ></div>
+
+        <div
+          class="portal-debris debris-b"
+          data-speed="0.65"
+          data-x-speed="-0.3"
+          data-rotate="-280"
+          data-pointer="1"
+        ></div>
+
+        <div
+          class="portal-debris debris-c"
+          data-speed="-0.8"
+          data-x-speed="-0.18"
+          data-rotate="330"
+          data-pointer="1.2"
+        ></div>
+
+        <div
+          class="portal-debris debris-d"
+          data-speed="0.9"
+          data-x-speed="0.25"
+          data-rotate="-390"
+          data-pointer="1.4"
+        ></div>
+
+        <div class="portal-particles" id="portalParticles" aria-hidden="true"></div>
+
+        <div class="story-content portal-copy reveal">
+          <div class="story-number">04</div>
+          <p class="eyebrow">THE FINAL THRESHOLD</p>
+          <h2>THE EVENT<br>HORIZON</h2>
+          <p class="story-text">
+            Every ending is an entrance<br>
+            somewhere else.
+          </p>
+        </div>
+
+        <div class="portal-warning" aria-hidden="true">
+          <span>CAUSAL BOUNDARY</span>
+          <strong>∞</strong>
+          <small>NO RETURN VECTOR</small>
+        </div>
+
+        <div class="portal-whiteout" id="portalWhiteout"></div>
+
+        <div class="scene-fade-top"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         09 — BEYOND
+    ========================================================== -->
+    <section class="scene scene-beyond" id="beyond" data-scene="BEYOND">
+
+      <div class="beyond-background"></div>
+
+      <div class="beyond-orbit orbit-one"></div>
+      <div class="beyond-orbit orbit-two"></div>
+      <div class="beyond-orbit orbit-three"></div>
+
+      <div class="beyond-content reveal">
+        <p class="eyebrow dark">CHRONOSCAPE // JOURNEY COMPLETE</p>
+        <h2>YOU MADE IT<br><span>BEYOND.</span></h2>
+        <p>But the journey never really ends.</p>
+
+        <button class="magnetic-btn restart-btn" id="restartBtn">
+          <span>TRAVEL AGAIN</span>
+          <i>↺</i>
+        </button>
+      </div>
+
+      <footer class="final-footer">
+        <span>CHRONOSCAPE</span>
+        <span>THE INFINITE PARALLAX JOURNEY</span>
+        <span>∞</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
